@@ -22,7 +22,22 @@
 h1, h2, h3{
     font-family: 'Open Sans', sans-serif;
 }
+.navbar-default .navbar-toggle {
+    border-color: white;
+    border-width: 2px;
+}
 
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+    &:hover, &:focus{
+        background-color: #00c6ff;
+    }
+}
+
+.navbar-brand{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+}
 .navbar{
     // Gradient is provided by @_ighosh from https://uigradients.com
     background: #00c6ff; /* fallback for old browsers */
