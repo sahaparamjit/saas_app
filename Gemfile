@@ -21,6 +21,9 @@ gem 'jbuilder', '2.5.0'
 # Boostrap SAAS for Ruby App
 gem 'bootstrap-sass', '3.3.7'
 
+# Hirb Gem for beter visualization of DB tables
+gem 'hirb', '0.7.3'
+
 #Font-Awesome for UI changes
 gem 'font-awesome-sass', '4.6.2'
 # Use Redis adapter to run Action Cable in production
