@@ -27,6 +27,8 @@ gem 'hirb', '0.7.3'
 gem 'devise', '4.2.0'
 # Use Stripe Gem for Payment Gateway
 gem 'stripe', '1.48.0'
+# Use Figaro Gem for secure ENV setup
+gem 'figaro', '1.1.1'
 #Font-Awesome for UI changes
 gem 'font-awesome-sass', '4.6.2'
 # Use Redis adapter to run Action Cable in production
