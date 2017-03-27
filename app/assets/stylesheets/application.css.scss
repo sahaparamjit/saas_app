@@ -49,6 +49,10 @@ h1, h2, h3{
     border: none;
 }
 
+.alert-notice{
+    display :none;
+}
+
 .home-callout{
     // Gradient is provided by @_ighosh from https://uigradients.com
     background: #00c6ff; /* fallback for old browsers */
