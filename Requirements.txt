@@ -1,0 +1,6 @@
+Memberships
+    * Users should see link for the Basic plan on home page. - Done
+    * User should see link for Pro plan. - Done
+    * The Basic plan on the home page should point to Regular Devise Sign up.
+    * Pro Plan link should point to a custom signup form.
+    
