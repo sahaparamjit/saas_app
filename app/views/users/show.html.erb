@@ -1,11 +1,10 @@
-<div class="container">
+<div class="container pro-box">
     <div class="col-md-6 col-md-offset-3">
-        <div class="well">
             <div class="span3">
                 <center>
                     <img src=<%= @user.profile.avatar.url %> name="aboutme" width="140" height="140" border="0" class="img-circle"></img>
                     <h3 class="media-heading"><%= @user.profile.first_name %> <%= @user.profile.last_name %>  
-                    </br><small><%= @user.profile.job_title %></small></h3>
+                    </br><span><%= job_title_icon %></span><small> <%= @user.profile.job_title %></small></h3>
                     <% if current_user.plan_id == 2 %>
                         <span><strong>Contact Details: </strong></span>
                         <span class="label label-warning"><%= @user.profile.contact_email %></span>
@@ -13,6 +12,7 @@
                     <% end %>
                     </center>
                     <hr>
+                    <div class="well well-modify">
                 <center>
                     <p class="text-left text-justify"><strong>Bio: </strong><br>
                     <%= @user.profile.description %></p>
@@ -22,10 +22,10 @@
                             <center>
                                 <p>Not showing your Contact Details!.</p><button type="button" class="btn btn-default" data-dismiss="modal">Know More!</button>
                             </center>
+                            </div>
                         </div>
                     <% end %>
                 </center>
             </div>
-        </div>
     </div>
 </div>
