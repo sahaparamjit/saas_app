@@ -1,0 +1,22 @@
+      <div class="text-center">
+          <h2>Create Your Profile.</h2>
+          <p>Create your profile to list yourself on DevMatch Community.</p>
+      </div>    
+      <%= form_for @profile, url: user_profile_path do |f| %>
+          <%= f.label :first_name %>
+          <%= f.text_field :first_name, class:'form-control'%>
+          <%= f.label :last_name %>
+          <%= f.text_field :last_name, class:'form-control'%>
+          </br>
+          <%= f.label :job_title %>
+          <%= f.select :job_title,['Developer', 'Entrepreneur', 'Investor'],{}, class:'form-control dropdown-toggle'%>
+          </br>
+          <%= f.label :phone_number %>
+          <%= f.text_field :phone_number, class:'form-control'%>
+          <%= f.label :contact_email %>
+          <%= f.text_field :contact_email, class:'form-control'%>
+          <%= f.label :description %>
+          <%= f.text_field :description, class:'form-control'%>
+          </br>
+          <%= f.submit 'Create Profile', class: 'btn btn-primary'%>
+      <% end %>
