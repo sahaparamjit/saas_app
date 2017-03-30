@@ -26,7 +26,13 @@ h1, h2, h3{
     border-color: white;
     border-width: 2px;
 }
+.hero-spacer {
+    margin-top: 50px;
+}
 
+.hero-feature {
+    margin-bottom: 30px;
+}
 .navbar-default .navbar-toggle .icon-bar {
     background-color: white;
     &:hover, &:focus{
@@ -64,6 +70,12 @@ h1, h2, h3{
   background: rgba(255, 255, 255, 0.3);
   border-color: rgba(255, 255, 255, 0.5);
   margin-top: -14px;
+}
+.alert-success{
+    padding-top: 20px;
+}
+.comm-btn{
+    display:inline-block;
 }
 
 .home-callout{

@@ -6,9 +6,9 @@
                     <h3 class="media-heading"><%= @user.profile.first_name %> <%= @user.profile.last_name %>  
                     </br><span><%= job_title_icon %></span><small> <%= @user.profile.job_title %></small></h3>
                     <% if current_user.plan_id == 2 %>
-                        <span><strong>Contact Details: </strong></span>
-                        <span class="label label-warning"><%= @user.profile.contact_email %></span>
-                        <span class="label label-info"><%= @user.profile.phone_number %></span>
+                        <span><strong>Contact: </strong></span>
+                        <i class="fa fa-envelope" aria-hidden="true"></i> <span class="label label-warning"><%= @user.profile.contact_email %></span>
+                        <i class="fa fa-phone" aria-hidden="true"></i> <span class="label label-info"><%= @user.profile.phone_number %></span>
                     <% end %>
                     </center>
                     <hr>
@@ -20,7 +20,7 @@
                     <% if current_user.plan_id != 2 %>
                         <div class="modal-footer">
                             <center>
-                                <p>Not showing your Contact Details!.</p><button type="button" class="btn btn-default" data-dismiss="modal">Know More!</button>
+                                <p>Not showing Contact Details!.</p><button type="button" class="btn btn-default" data-dismiss="modal">Know More!</button>
                             </center>
                             </div>
                         </div>

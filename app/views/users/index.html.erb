@@ -1,0 +1,67 @@
+</br> </br>
+<div class="container pro-box">
+    <div class="row text-center">
+        <% @userall.each do |user| %>
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <a href=<%= user_url(id: user.profile.id) %>><img src=<%= user.profile.avatar.url %> class="img-circle"></a>
+                    <div class="caption">
+                        <h3><a href=<%= user_url(id: user.profile.id) %>><%= user.profile.first_name %></a></h3>
+                        <p>
+                            <% if user.profile.job_title == "Developer" %>
+                                <i class='fa fa-code'></i>
+                            <% elsif user.profile.job_title == "Investor" %>
+                                <i class='fa fa-dollar'></i>
+                            <% elsif user.profile.job_title == "Entrepreneur" %>
+                                <i class='fa fa-lightbulb-o'></i>
+                            <% end %>
+                            <small> <%= user.profile.job_title %>
+                                <% if user.plan_id == 2 %>
+                                    <span class="label label-danger">PRO</span>
+                                <% end %>
+                            </small>
+                        </p>
+                        <p>
+                        <%if @user.plan_id == 2 %>
+                        <div class="comm-btn">
+                            <div>
+                                <a href="#"  data-toggle="modal" data-target="#myModal<%= user.profile.id %>" class="btn btn-primary comm-btn btn-small">Contact</a>
+                            </div>
+                                <div class="modal fade" id="myModal<%= user.profile.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                                                <h4 class="modal-title" id="myModalLabel">Contact <%= user.profile.first_name %></h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <center>
+                                                    <img src=<%= user.profile.avatar.url %> name="aboutme" width="140" height="140" border="0" class="img-circle"></a>
+                                                    <h3 class="media-heading"><%= user.profile.first_name %> <%= user.profile.last_name %> <small><%= user.profile.job_title %>
+                                                    <% if user.plan_id == 2 %>
+                                                        <span class="label label-danger">PRO</span>
+                                                    <% end %>
+                                                    </small></h3>
+                                                    <span><strong>Contact: </strong></span>
+                                                    <i class="fa fa-envelope" aria-hidden="true"></i> <span class="label label-warning"><%= user.profile.contact_email %></span>
+                                                    <i class="fa fa-phone" aria-hidden="true"></i> <span class="label label-info"><%= user.profile.phone_number %></span>
+                                                </center>
+                                                <hr>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <center>
+                                                    <button class="btn btn-default" onclick="location.href='<%= user_url(id: user.profile.id) %>'"><%= user.profile.first_name %>'s Profile.</button>
+                                                </center>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <% end %>
+                    <a href=<%= user_url(id: user.profile.id) %> class="btn btn-default comm-btn">More Info</a></p>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>
