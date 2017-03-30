@@ -7,7 +7,7 @@ class ProfilesController < ApplicationController
         @profile = @user.build_profile( profile_params )
         if @profile.save
             flash[:notice] = "Profile Created Successfully!"
-            redirect_to root_path
+            redirect_to user_url(id: current_user)
         else
             render action :new
         end

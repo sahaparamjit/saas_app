@@ -29,6 +29,8 @@ gem 'devise', '4.2.0'
 gem 'stripe', '1.48.0'
 # Use Figaro Gem for secure ENV setup
 gem 'figaro', '1.1.1'
+#Use paperclip for image upload
+gem 'paperclip', '4.3.6'
 #Font-Awesome for UI changes
 gem 'font-awesome-sass', '4.6.2'
 # Use Redis adapter to run Action Cable in production
