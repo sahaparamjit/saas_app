@@ -3,7 +3,7 @@
         <div class="well">
             <div class="span3">
                 <center>
-                    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" name="aboutme" width="140" height="140" border="0" class="img-circle"></img>
+                    <img src=<%= @user.profile.avatar.url %> name="aboutme" width="140" height="140" border="0" class="img-circle"></img>
                     <h3 class="media-heading"><%= @user.profile.first_name %> <%= @user.profile.last_name %>  
                     </br><small><%= @user.profile.job_title %></small></h3>
                     <% if current_user.plan_id == 2 %>

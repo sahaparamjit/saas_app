@@ -7,6 +7,8 @@
           <%= f.text_field :first_name, class:'form-control'%>
           <%= f.label :last_name %>
           <%= f.text_field :last_name, class:'form-control'%>
+          <%= f.label :avatar %>
+          <%= f.file_field :avatar, class:'form-control'%>
           </br>
           <%= f.label :job_title %>
           <%= f.select :job_title,['Developer', 'Entrepreneur', 'Investor'],{}, class:'form-control dropdown-toggle'%>
